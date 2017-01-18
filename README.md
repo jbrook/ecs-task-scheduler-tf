@@ -1,9 +1,9 @@
 # ECS Task Runner Terraform Module
 
-A terraform module to schedule standalone EC2 Container Service (ECS) tasks.
+A terraform module to schedule standalone AWS EC2 Container Service (ECS) tasks.
 
 * Creates a Cloudwatch scheduled event with a cron-style or rate expression.
-* Provisions a lambda function that runs an ECS task definition on a specific cluster with an override for the container command.
+* Provisions a lambda function that runs an AWS ECS task definition on a specific cluster with an override for the container command.
 * Targets the scheduled event at the Lambda function.
 * Takes care of setting up the necessary IAM roles and policies for Lambda and Cloudwatch logging.
 
