@@ -91,7 +91,7 @@ data "template_file" "task_json" {
  * Lambda function.
  */
 resource "aws_lambda_permission" "allow_cloudwatch_to_call_task_runner" {
-  statement_id = "AllowExecutionFromCloudWatch"
+  statement_id = "${var.job_identifier}-AllowExecutionFromCloudWatch"
   action = "lambda:InvokeFunction"
   function_name = "${var.lambda_function_name}"
   principal = "events.amazonaws.com"
