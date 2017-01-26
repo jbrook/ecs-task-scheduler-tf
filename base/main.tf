@@ -30,6 +30,10 @@ resource "aws_lambda_function" "task_runner" {
       SOME_VAR = "SOME_VALUE"
     }
   }
+  lifecycle {
+    # Attempt to workaround - https://github.com/hashicorp/terraform/issues/7613
+    ignore_changes = ["filename"]
+  }
 }
 
 /**
